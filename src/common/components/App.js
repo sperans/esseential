@@ -3,7 +3,7 @@ import Navigation  from "./Navigation";
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Main from "./Main";
+
 
 
 injectTapEventPlugin();

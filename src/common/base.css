@@ -14,11 +14,22 @@ h1 {
   color: #F97F85;
 }
 
+.span {
+  color: #F97F85;
+
+}
+
+
+
+
+
+
+
 :global(#container) {
   width: 100%;
 
   @media (min-width: 960px) {
-    width: 960px;
+    width: 55%;
     margin: 0 auto;
   }
 

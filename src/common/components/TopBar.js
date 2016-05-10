@@ -5,8 +5,24 @@ import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import { browserHistory } from 'react-router';
+import Paper from 'material-ui/Paper';
+
+
+function logIn() {
+  browserHistory.push('/');
+};
+
+function register() {
+  browserHistory.push('/register');
+};
+
+
+
 
 const TopBar = () => (
+<Paper zDepth={4}>
+  <div>
   <AppBar
 	title="The Drive.me App!"
 	 titleStyle={{
@@ -21,14 +37,19 @@ const TopBar = () => (
         targetOrigin={{horizontal: 'right', vertical: 'top'}}
         anchorOrigin={{horizontal: 'right', vertical: 'top'}}
       >
-        <MenuItem primaryText="LogIn" />
-        <MenuItem primaryText="Sign Out" />
-        <MenuItem primaryText="Register" />
+        <MenuItem
+        primaryText="LogIn"
+        onClick={logIn} />
+        <MenuItem
+         primaryText="Sign Out" />
+        <MenuItem
+         primaryText="Register"
+         onClick={register} />
       </IconMenu>
     }
   />
+  </div>
+  </Paper>
 );
 
 export default TopBar;
-
-

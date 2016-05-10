@@ -3,10 +3,10 @@ import styles from './style.css';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Login from '../../common/components/Login';
+import Register from '../../common/components/Register';
 
 
-export default class LoginPage extends React.Component {
+export default class RegisterPage extends React.Component {
 
 
 
@@ -17,7 +17,7 @@ export default class LoginPage extends React.Component {
       <div className={styles.content}>
       <div id="container">
       <div id="container">
-        <Login />
+        <Register />
       </div>
       </div>
       </div>
