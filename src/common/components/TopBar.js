@@ -17,7 +17,9 @@ function register() {
   browserHistory.push('/register');
 };
 
-
+function logOut() {
+Stamplay.User.logout();
+};
 
 
 const TopBar = () => (
@@ -41,7 +43,8 @@ const TopBar = () => (
         primaryText="LogIn"
         onClick={logIn} />
         <MenuItem
-         primaryText="Sign Out" />
+         primaryText="Sign Out"
+         onClick={logOut} />
         <MenuItem
          primaryText="Register"
          onClick={register} />

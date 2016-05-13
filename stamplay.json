@@ -1,0 +1,10 @@
+{
+  "appId": "pickup",
+  "apiKey": "fdbb714e6b0f2b91577d37744f67ea29cc6d5700b335feafd51afa117454bf87",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

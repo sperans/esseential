@@ -7,8 +7,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import { browserHistory } from 'react-router';
-
-
+import PaperCard from '../../common/components/PaperCard';
 
 
 const style = {
@@ -24,21 +23,21 @@ export default class HomePage extends React.Component {
 
   render() {
     return (
-      <div className={styles.content}>
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
+  <div className={styles.content}>
+    <MuiThemeProvider muiTheme={getMuiTheme()}>
       <div id="container">
-
         <h1>Home Pages</h1>
-        <p className={styles.welcomeText}>Make a new Ride!</p>
-        <div>
-        <FloatingActionButton style={style} onClick={this.newRidePage}>
-        <ContentAdd />
-        </FloatingActionButton>
-    </div>
-        <CardUser />
-      </div>
-      </MuiThemeProvider>
-      </div>
+          <p className={styles.welcomeText}>Make a new Ride!</p>
+            <div>
+              <FloatingActionButton style={style} onClick={this.newRidePage}>
+                <ContentAdd />
+              </FloatingActionButton>
+            </div>
+          <CardUser />
+          <PaperCard />
+        </div>
+    </MuiThemeProvider>
+  </div>
     );
   }
 }

@@ -6,12 +6,16 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import Register from '../../common/components/Register';
 
 
+
+
+
 export default class RegisterPage extends React.Component {
 
 
 
 
   render() {
+
     return (
       <MuiThemeProvider muiTheme={getMuiTheme()}>
       <div className={styles.content}>

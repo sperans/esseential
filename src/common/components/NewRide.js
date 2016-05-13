@@ -5,6 +5,8 @@ import TimePicker from 'material-ui/TimePicker';
 import DatePicker from 'material-ui/DatePicker';
 
 
+
+
 const style = {
 marginTop: 12,
 width: '100%',
@@ -65,7 +67,11 @@ const NewRide = () => (
           multiLine={true}
           rows={2}
         />
-        <RaisedButton label="MAKE NEW RIDE" secondary={true} style={style} />
+        <RaisedButton
+        onClick={postData}
+        label="MAKE NEW RIDE"
+        secondary={true}
+         style={style} />
       </div>
 
 );

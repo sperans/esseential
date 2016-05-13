@@ -28,7 +28,7 @@ h1 {
 :global(#container) {
   width: 100%;
 
-  @media (min-width: 960px) {
+  @media (min-width: 660px) {
     width: 55%;
     margin: 0 auto;
   }
