@@ -7,7 +7,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import { browserHistory } from 'react-router';
-import PaperCard from '../../common/components/PaperCard';
+import AllRides from '../../common/components/AllRides';
 
 
 const style = {
@@ -33,8 +33,7 @@ export default class HomePage extends React.Component {
                 <ContentAdd />
               </FloatingActionButton>
             </div>
-          <CardUser />
-          <PaperCard />
+          <AllRides />
         </div>
     </MuiThemeProvider>
   </div>

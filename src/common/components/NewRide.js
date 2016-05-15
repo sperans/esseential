@@ -68,7 +68,6 @@ const NewRide = () => (
           rows={2}
         />
         <RaisedButton
-        onClick={postData}
         label="MAKE NEW RIDE"
         secondary={true}
          style={style} />

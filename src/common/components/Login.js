@@ -10,25 +10,29 @@ width: '100%',
 };
 
 
-class Login extends React.Component {
+export default class Login extends React.Component {
 
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
-      email: '',
-      password:'',
-    };
+      email:'mihamprivat@gmail.com',
+      password:'Traktor11',
+    }
+
+    this.onEmailChange = this.onEmailChange.bind(this)
+    this.onPasswordChange = this.onPasswordChange.bind(this)
+   }
+   onEmailChange(event) {
+    this.setState({email: event.target.value})
   }
 
-  handleChange = (event) => {
-    this.setState({
-      email: event.target.email,
-      password: event.target.password,
-    });
+  onPasswordChange(event) {
+    this.setState({password: event.target.value})
   }
 
   loginUser() {
+
     Stamplay.User.login(this.state)
     .then(function(res) {
       // success
@@ -42,8 +46,9 @@ class Login extends React.Component {
   <div>
   <h3>Login</h3>
   <TextField
-    email={this.state.email}
-    onChange={this.handleChange}
+  id="text-field-controlled"
+    value={this.state.email}
+    onChange={this.onEmailChange}
     hintText="Message Field"
     floatingLabelText="Email"
     fullWidth={true}
@@ -52,8 +57,9 @@ class Login extends React.Component {
     />
     <br />
     <TextField
-    password={this.state.password}
-    onChange={this.handleChange}
+    id="text-field-controlled"
+    value={this.state.password}
+    onChange={this.onPasswordChange}
     hintText="Password Field"
     floatingLabelText="Password"
     fullWidth={true}
@@ -61,12 +67,9 @@ class Login extends React.Component {
     rows={2}
       />
   <RaisedButton
-    onClick={this.loginUser}
+    onClick={this.loginUser.bind(this)}
     label="LOGIN" secondary={true} style={style} />
         </div>
       )
     }
   }
-
-
-export default Login;
